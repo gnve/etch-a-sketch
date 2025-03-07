@@ -11,10 +11,20 @@ function flexGrid(containerId, gridSize) {
         container.appendChild(gridItem);
 
     gridItem.addEventListener("mouseover", () => {
-        gridItem.style.backgroundColor = "black";
+        gridItem.style.backgroundColor = "gainsboro";
         })
     }
 }
 
-let userSize = 27;
-flexGrid("grid-container", userSize);
+const button = document.getElementById("size-button");
+button.addEventListener("click", function () {
+    let userSize = parseInt(prompt("How many pixels?"));
+
+    if (userSize > 100) {
+        alert("Less than 100 only!");
+    } else {
+        flexGrid("grid-container", userSize);
+    }
+});
+
+flexGrid("grid-container", 24);

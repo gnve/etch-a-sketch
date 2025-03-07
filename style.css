@@ -3,6 +3,10 @@ h1 {
     color: red;
 }
 
+#size-button {
+    margin-bottom: 12px;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
