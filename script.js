@@ -9,8 +9,12 @@ function flexGrid(containerId, gridSize) {
         const gridItem = document.createElement("div");
         gridItem.style.flex = `0 0 ${itemWidth}%`;
         container.appendChild(gridItem);
+
+    gridItem.addEventListener("mouseover", () => {
+        gridItem.style.backgroundColor = "black";
+        })
     }
 }
 
-flexGrid("grid-container", 16);
-
+let userSize = 27;
+flexGrid("grid-container", userSize);
